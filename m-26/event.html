@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event  JS</title>
+</head>
+<body>
+    <button onclick="bgPink()" id="bg-pink">bg pink</button>
+    <button id="bg-yellow">bg yellow</button>
+    <button  id="bg-red">bg red</button>
+    
+
+    <script>
+        // option --- 1
+        function bgPink(){
+            document.body.style.background= 'pink';
+        }
+        let bgYellow = document.getElementById('bg-yellow');
+        bgYellow.onclick = bgYellowF;
+
+        // option --- 2
+        function bgYellowF(){
+            document.body.style.background= 'yellow';
+        }
+        // option --- 3
+        let bgRed = document.getElementById('bg-red');
+        bgRed.addEventListener('click', function(){
+            document.body.style.background= 'red';
+        })
+        // bgRed.onclick = bgYellowF;
+
+    </script>
+</body>
+</html>
