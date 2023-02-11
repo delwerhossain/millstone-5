@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Mouse</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+    <div id="" class="container ml-6">
+        <h1 class="text-3xl  my-4">Event Mouse</h1>
+        <div class="flex space-x-2 mb-4">
+            <button disabled id="btn-update" type="button"
+                class=" px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+            <!-- <button  id="btn-update" type="button" >Button</button> -->
+        </div>
+
+        <input id="input-update" type="text" class="
+        form-control block  px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " placeholder="Example label" />
+    </div>
+
+    <script>
+        //  input area keyup event handler
+        // let inputUpdate = document.getElementById('input-update');
+        // inputUpdate.addEventListener('keyup', function () {
+        //     let inputUpdate = document.getElementById('input-update');
+        //     // let inputF = inputUpdate.value;
+        //     let inputF = event.target.value;
+        //     // console.log(inputF)
+        //     document.body.style.background = 'AliceBlue';
+        // })
+
+        //  btn area
+        let btnUpdate = document.getElementById('input-update');
+        btnUpdate.addEventListener('keyup', function () {
+            let inputUpdate = document.getElementById('input-update');
+            let inputF = inputUpdate.value;
+            // console.log(inputF);
+            let btnUpdate = document.getElementById('btn-update');
+            // let btnDis = btnUpdate.value;
+            if (inputF == 'delete') {
+                btnUpdate.removeAttribute('disabled');
+            }
+            else { btnUpdate.setAttribute('disabled', true); }
+
+
+            // console.log('this is input update')
+            // document.body.style.background = 'pink';
+        })
+    </script>
+</body>
+
+</html>
