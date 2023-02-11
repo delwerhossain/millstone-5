@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commnet Box</title>
+</head>
+
+<body>
+    <div class="container-1">
+        <h1>Commnet Box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quidem cum incidunt delectus tempore,
+            excepturi corporis facere suscipit illo. Placeat eveniet commodi pariatur autem ea? Nihil impedit deleniti
+            suscipit modi?</p>
+    </div>
+    <div id="container-2">
+        <h1>Commnet Box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quidem cum incidunt delectus tempore,
+            excepturi corporis facere suscipit illo. Placeat eveniet commodi pariatur autem ea? Nihil impedit deleniti
+            suscipit modi?</p>
+    </div>
+    <div class="container-3">
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <input id="btn-update" type="submit" value="Submit">
+    </div>
+    <script>
+
+        let text = document.getElementById("btn-update");
+        text.addEventListener("click", function () {
+            let textareaT = document.getElementById("text");
+            let textInput = textareaT.value;
+            let pTag = document.createElement("p");
+            let container2 = document.getElementById('container-2');
+            pTag.innerText = textInput;
+            container2.appendChild(pTag);
+            
+
+
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -7,6 +7,49 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <h1 id="defultText"> this is defult test</h1>
+        <button id="textChange" >change</button>
+        <button id="textChangeTwo" >change</button>
+
+    </div>
+    <div>
+        <h1 id="textInputChange">Lorem ipsum dolor sit amet.</h1>
+        <input id="input-" type="text">
+        <button id="inputChange" >change</button>
+
+    </div>
+
+
+    <script>
+
+        let btnChange = document.getElementById('textChange');
+        btnChange.addEventListener('mousemove',function(){
+            let defultTextCon = document.getElementById('defultText');
+            defultTextCon.innerText = 'change';
+            document.body.style.background ='white';
+        })
+
+
+        let btnChangeTwo = document.getElementById('textChangeTwo');
+        btnChangeTwo.addEventListener('mousemove',function(){
+            let defultTextConTwo = document.getElementById('defultText');
+            defultTextConTwo.innerText = 'Two';
+            document.body.style.background ='pink';
+        })
+
+        let btnInputChange = document.getElementById('inputChange');
+        btnInputChange.addEventListener('click',function(){
+            let inputFil = document.getElementById('input-');
+            let inputText = inputFil.value;
+            let p = document.getElementById('textInputChange');
+            p.innerText = inputText;
+            inputFil.value = '';
+
+            // let textInputChange = document.getElementById('textInputChange');
+            
+        })
+    </script>
     
 </body>
 </html>
