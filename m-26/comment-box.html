@@ -15,15 +15,19 @@
             excepturi corporis facere suscipit illo. Placeat eveniet commodi pariatur autem ea? Nihil impedit deleniti
             suscipit modi?</p>
     </div>
-    <div id="container-2">
+    <div id="container">
         <h1>Commnet Box</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quidem cum incidunt delectus tempore,
             excepturi corporis facere suscipit illo. Placeat eveniet commodi pariatur autem ea? Nihil impedit deleniti
             suscipit modi?</p>
     </div>
     <div class="container-3">
-        <textarea name="text" id="text" cols="30" rows="10"></textarea>
-        <input id="btn-update" type="submit" value="Submit">
+        <input id="h1-text" type="text"> <br><br>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea> <br><br>
+        <input style="padding: 10px; background-color: antiquewhite; border-radius: 10px; border: 0px; " id="btn-update" type="submit" value="Submit">
+    </div>
+    <div id="container-2">
+
     </div>
     <script>
 
@@ -31,12 +35,18 @@
         text.addEventListener("click", function () {
             let textareaT = document.getElementById("text");
             let textInput = textareaT.value;
+            let textareaH = document.getElementById("h1-text");
+            let textInputH = textareaH.value;
+            let H1Tag = document.createElement("h1");
             let pTag = document.createElement("p");
             let container2 = document.getElementById('container-2');
+            H1Tag.innerText = textInputH;
             pTag.innerText = textInput;
+            container2.appendChild(H1Tag);
             container2.appendChild(pTag);
+            textareaT.value = '';
+            textareaH.value = '';
             
-
 
 
         })
