@@ -71,19 +71,19 @@
 
                     <div class="flex justify-center items-baseline my-8">
                         <span class="mr-2 text-5xl font-extrabold">$</span>
-                        <span id="total-cash" class="mr-2 text-5xl font-extrabold">99</span>
+                        <span id="total-cash" class="mr-2 text-5xl font-extrabold">1200</span>
 
                     </div>
 
                 </div>
             </div>
-            <div class="space-y-8 grid grid-cols-2 grid-rows-2  sm:gap-6 gap-10 lg:space-y-0">
+            <div class="space-y-8 grid sm:grid-cols-2 sm:gap-6 lg:space-y-0">
 
 
                 <!-- Pricing Card -->
                 <div
                     class="flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+                    <h3 class="mb-4 text-2xl font-semibold">Cash In</h3>
 
                     <div class="flex justify-center items-baseline my-8">
                         <span class="mr-2 text-5xl font-extrabold">$</span>
@@ -93,9 +93,9 @@
                     <input
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         type="number" name="" id="cash-in" placeholder="enter the amount">
-                    <a id="btn-cash-in" href="#"
+                    <button id="btn-cash-in"
                         class="mt-4 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Cash
-                        In</a>
+                        In</button>
                 </div>
 
 
@@ -103,7 +103,7 @@
 
                 <div
                     class="flex flex-col p-6 mx-auto w-full text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+                    <h3 class="mb-4 text-2xl font-semibold">Cash Withdrow</h3>
 
                     <div class="flex justify-center items-baseline my-8">
                         <span class="mr-2 text-5xl font-extrabold">$</span>
@@ -113,55 +113,16 @@
                     <input
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         type="number" name="" id="cash-out" placeholder="enter the amount">
-                    <a id="btn-cash-out" href="#"
+                    <button id="btn-cash-out" href="#"
                         class="mt-4 text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:ring-orange-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-orange-900">Cash
-                        In</a>
+                        Out</button>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <script>
-
-        document.getElementById('btn-cash-in').addEventListener('click', function () {
-            let cashIn = document.getElementById('cash-in');
-            let valueCashIn = cashIn.value;
-            document.getElementById('show-cash-in').innerText = valueCashIn;
-
-
-        });
-
-
-
-        document.getElementById('btn-cash-out').addEventListener('click', function () {
-            let cashOut = document.getElementById('cash-out');
-            let valueCashOut = cashOut.value;
-            document.getElementById('show-cash-out').innerText = valueCashOut;
-
-        });
-
-        let cashIn = document.getElementById('cash-in');
-        let valueCashIn = parseFloat(cashIn.value);
-
-        let cashOut = document.getElementById('cash-out');
-        let valueCashOut = parseFloat(cashOut.value);
-
-        // console.log(typeof(valueCashIn));
-
-        let totalCash = document.getElementById('totalCash');
-        if ((typeof(valueCashIn)) === 'number') {
-            totalCash = totalCash + valueCashIn;
-            document.getElementById('total-cash').innerText = totalCash;
-
-        }
-        else if ((typeof(valueCashOut)) === 'number') {
-            totalCash = totalCash - valueCashOut;
-            document.getElementById('total-cash').innerText = totalCash;
-        }
-
-
-    </script>
+    <script src="cash.js"></script>
 </body>
 
 </html>
