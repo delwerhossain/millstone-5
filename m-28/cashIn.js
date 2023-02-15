@@ -13,6 +13,7 @@ document.getElementById('btn-cash-in').addEventListener('click', function () {
 
 
 
+
 document.getElementById('btn-cash-out').addEventListener('click', function () {
     let valueCashOut = getValue('cash-out');
     let showValueCashOut = getInnertext('show-cash-out');
