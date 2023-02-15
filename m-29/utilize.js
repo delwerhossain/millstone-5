@@ -19,6 +19,10 @@ function btnCalculation(inputElmentById, isIncrese) {
 
 }
 
+
+// sub total price calculation
+
+
 function subTotal(itemValue, itemPrice, isIncresetting) {
     let subInnertext = parseInt((document.getElementById("sub-total").innerText));
     // let inputValue = parseInt(document.getElementById(itemValue).value);
@@ -27,11 +31,25 @@ function subTotal(itemValue, itemPrice, isIncresetting) {
     if (isIncresetting && itemValue > 0) {
 
         subTotal = subInnertext + itemPrice;
+        document.getElementById("sub-total").innerText = subTotal;
 
     }
     else if (!isIncresetting && itemValue > 0) {
         subTotal = parseInt(subInnertext) - itemPrice;
+        document.getElementById("sub-total").innerText = subTotal;
     }
+    else if (!isIncresetting && itemValue === 0) {
 
-    document.getElementById("sub-total").innerText = subTotal;
+        subTotal = parseInt(subInnertext) - itemPrice;
+        document.getElementById("sub-total").innerText = subTotal;
+    }
+    else if (itemPrice < 0) {
+        return;
+    }
 }
+
+const product = 5;
+const price = "7";
+const subTotal = product * price;
+const tax = subTotal / 10;
+const total = subTotal + tax; 
