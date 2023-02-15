@@ -15,6 +15,9 @@ function btnCalculation(inputElmentById, isIncrese) {
         zeroValue = 0;
         return zeroValue;
     }
+    else if (newInputValue === 0) { 
+        
+    }
     return Math.abs(newInputValue);
 
 }
@@ -47,9 +50,3 @@ function subTotal(itemValue, itemPrice, isIncresetting) {
         return;
     }
 }
-
-const product = 5;
-const price = "7";
-const subTotal = product * price;
-const tax = subTotal / 10;
-const total = subTotal + tax; 

@@ -1,7 +1,7 @@
-
 // step 1: import modules
 
 document.getElementById('btn-cash-in').addEventListener('click', function () {
+    
 
     let valueCashIn = getValue('cash-in');
     let showValueCashIn = getInnertext('show-cash-in');
@@ -12,6 +12,7 @@ document.getElementById('btn-cash-in').addEventListener('click', function () {
 });
 
 
+// console.log('Total');
 
 
 document.getElementById('btn-cash-out').addEventListener('click', function () {
