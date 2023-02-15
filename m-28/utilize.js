@@ -2,10 +2,10 @@ function getValue(value) {
     let showValueCashIn = parseFloat(document.getElementById(value).value);
     if (isNaN(showValueCashIn)) {
         alert('please add  amount');
-        document.getElementById('cash-in').value = '';
+        document.getElementById(value).value = '';
         return 0;
     }
-    document.getElementById('cash-in').value = '';
+    document.getElementById(value).value = '';
     return showValueCashIn;
 }
 

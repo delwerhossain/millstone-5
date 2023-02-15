@@ -1,24 +1,31 @@
 function btnCalculation(inputElmentById, isIncrese) {
     const inputValue = parseInt(document.getElementById(inputElmentById).value);
-    let newInputValue;
-    if (isIncrese) {
-        newInputValue = inputValue + 1;
+    if (inputValue <= 0) {
+        return;
     }
-    else {
-        newInputValue = inputValue - 1;
+    else if (inputValue > 0){
+        let newInputValue;
+        if (isIncrese) {
+            newInputValue = inputValue + 1;
+        }
+        else {
+            newInputValue = inputValue - 1;
+        }
+        document.getElementById(inputElmentById).value = newInputValue;
+        return Math.abs(newInputValue);
+    //     if (newInputValue < 0) {
+    //         alert("select atleast one Item");
+    //         document.getElementById(inputElmentById).value = 0;
+    //         let zeroValue = Math.abs(newInputValue);
+    //         zeroValue = 0;
+    //         return zeroValue;
+    //     }
+    //     else if (newInputValue === 0) {
+
+    //     }
+    //     return Math.abs(newInputValue);
+
     }
-    document.getElementById(inputElmentById).value = newInputValue;
-    if (newInputValue < 0) {
-        alert("select atleast one Item");
-        document.getElementById(inputElmentById).value = 0;
-        let zeroValue = Math.abs(newInputValue);
-        zeroValue = 0;
-        return zeroValue;
-    }
-    else if (newInputValue === 0) { 
-        
-    }
-    return Math.abs(newInputValue);
 
 }
 
