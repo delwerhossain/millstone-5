@@ -1,9 +1,11 @@
-// function nanfixed(inputPhone) {
-//     const amount = parseFloat(document.getElementById(inputPhone).value);
-//     if (amount <= 0) {
-//         return 0;
-//     }
-// }
+function nanfixed(inputPhone) {
+    
+    const amount = parseFloat(document.getElementById("input-phone").value);
+    console.log(amount);
+    if (amount <= 0) {
+        return;
+    }
+}
 function btnCalculation(inputElmentById, isIncrese) {
     const inputValue = parseInt(document.getElementById(inputElmentById).value);
     // if (inputValue <= 0) {

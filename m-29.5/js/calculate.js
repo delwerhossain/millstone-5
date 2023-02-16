@@ -11,7 +11,10 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
     // const totalBalanceInner = getInnertext("total-cost");
     // const totalCostInner = getInnertext("total-balance");
 
+
+    
     // calculate total cost
+
     const totalCostAmount = (foodAmountValue + rentAmountValue + clothAmountValue);
     document.getElementById("total-cost").innerText = totalCostAmount;
 

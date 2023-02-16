@@ -10,11 +10,11 @@ document.getElementById("btn-phone-plus").addEventListener("click", function () 
 
 document.getElementById("btn-phone-minus").addEventListener("click", function () {
     // nanfixed("input-phone");
-    const amount = parseFloat(document.getElementById("input-phone").value);
-    if (amount <= 0) {
-        return;
-    }
-
+    // const amount = parseFloat(document.getElementById("input-phone").value);
+    // if (amount <= 0) {
+    //     return;
+    // }
+    nanfixed("input-phone");
     let totalItem = btnCalculation("input-phone", false);
     totalItem = totalItem * 1200;
     document.getElementById("phone-price").innerText = totalItem;
